@@ -1,1 +1,142 @@
-/* Responsive Styles */
+/* =========================
+   RESPONSIVE CSS
+   ========================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+
+    .container {
+        width: 95%;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .feature-grid,
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .quote-btn {
+        margin: 10px 0 0;
+    }
+
+}
+
+
+/* Phones */
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+    }
+
+    .feature-grid,
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card,
+    .service-card {
+        text-align: center;
+    }
+
+    .cta {
+        padding: 60px 20px;
+    }
+
+    .cta h2 {
+        font-size: 28px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+}
+
+
+/* Small Phones */
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .section-title h2 {
+        font-size: 26px;
+    }
+
+    .logo span {
+        font-size: 18px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .quote-btn {
+        width: 100%;
+        max-width: 220px;
+        text-align: center;
+    }
+
+}
