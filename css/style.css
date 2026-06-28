@@ -176,7 +176,48 @@ nav a.active {
     border-radius: 12px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
+/* =========================
+   LUXURY BUTTON ENHANCEMENT
+   (DO NOT REPLACE EXISTING)
+   ========================= */
 
+.primary-btn,
+.secondary-btn,
+.quote-btn {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* soft luxury glow layer */
+.primary-btn::before,
+.quote-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.25),
+        rgba(255,255,255,0.05)
+    );
+    opacity: 0;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+/* hover glow effect */
+.primary-btn:hover::before,
+.quote-btn:hover::before {
+    opacity: 1;
+}
+
+/* subtle lift for luxury feel */
+.primary-btn:hover,
+.secondary-btn:hover,
+.quote-btn:hover {
+    transform: translateY(-3px);
+}
 /* =========================
    SECTIONS
    ========================= */
