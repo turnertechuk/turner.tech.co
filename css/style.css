@@ -370,3 +370,19 @@ footer {
     border-color: var(--primary);
     box-shadow: 0 0 0 3px rgba(30,102,255,0.15);
 }
+/* CONTACT FORM */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary);
+}
+
+/* =========================
+   CTA BUTTON FIX
+   ========================= */
+
+.cta .primary-btn {
+    display: inline-block;
+    margin-top: 30px;
+    background: var(--gold);
+    color: var(--dark);
+}
