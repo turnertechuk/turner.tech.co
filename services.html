@@ -1,704 +1,1291 @@
-<!DOCTYPE html>
-<html lang="en">
+/*==================================================
+    TURNER TECH V2
+    PART 1
+    Reset • Variables • Layout • Header
+==================================================*/
 
-<head>
+/*=========================
+  GOOGLE FONT
+=========================*/
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-    <title>Services | Turner Tech</title>
+/*=========================
+  RESET
+=========================*/
 
-    <meta name="description" content="Discover Turner Tech's custom PC building services. Gaming PCs, Workstations, Office PCs, Hardware Upgrades and Bespoke Builds.">
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    <!-- Google Fonts -->
+html{
+    scroll-behavior:smooth;
+}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+body{
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    font-family:'Poppins',sans-serif;
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    background:#f8f9fc;
 
-    <!-- Styles -->
+    color:#1b2433;
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    overflow-x:hidden;
 
-</head>
+    line-height:1.7;
 
-<body>
+}
 
-<!-- =========================
-     HEADER
-========================= -->
+/*=========================
+  VARIABLES
+=========================*/
 
-<header>
+:root{
 
-    <div class="container navbar">
+    --blue:#2563eb;
 
-        <a href="index.html" class="logo">
+    --blue-dark:#1d4ed8;
 
-            <img src="images/logo.png" alt="Turner Tech Logo">
+    --gold:#d4af37;
 
-            <div>
+    --white:#ffffff;
 
-                <h2>Turner Tech</h2>
+    --light:#f8f9fc;
 
-                <span>Precision Built.</span>
+    --dark:#162033;
 
-            </div>
+    --grey:#6b7280;
 
-        </a>
+    --shadow:
+        0 15px 40px rgba(0,0,0,.08);
 
-        <nav>
+    --radius:18px;
 
-            <a href="index.html">Home</a>
+}
 
-            <a href="services.html" class="active">Services</a>
+/*=========================
+  CONTAINER
+=========================*/
 
-            <a href="about.html">About</a>
+.container{
 
-            <a href="contact.html">Contact</a>
+    width:min(1180px,92%);
 
-            <a href="contact.html" class="quote-btn">
+    margin:auto;
 
-                Request Quote
+}
 
-            </a>
+/*=========================
+  HEADER
+=========================*/
 
-        </nav>
+header{
 
-    </div>
+    position:sticky;
 
-</header>
+    top:0;
 
-<!-- =========================
-     HERO
-========================= -->
+    z-index:999;
 
-<section class="hero">
+    background:#fff;
 
-    <div class="container hero-grid">
+    border-bottom:1px solid #ececec;
 
-        <div>
+    box-shadow:0 4px 20px rgba(0,0,0,.04);
 
-            <p class="eyebrow">
+}
 
-                TURNER TECH SERVICES
+.navbar{
 
-            </p>
+    display:flex;
 
-            <h1>
+    justify-content:space-between;
 
-                Professional
+    align-items:center;
 
-                <span>Custom PCs</span>
+    min-height:92px;
 
-            </h1>
+    gap:40px;
 
-            <p class="hero-text">
+}
 
-                Whether you're building a competitive gaming PC,
-                a powerful workstation or a reliable office computer,
-                every Turner Tech system is designed around your
-                requirements, budget and future upgrade path.
+/*=========================
+  LOGO
+=========================*/
 
-            </p>
+.logo{
 
-            <div class="hero-buttons">
+    display:flex;
 
-                <a href="contact.html" class="primary-btn">
+    align-items:center;
 
-                    Request A Quote
+    gap:16px;
 
-                </a>
+    text-decoration:none;
 
-                <a href="#services" class="secondary-btn">
+    color:inherit;
 
-                    Explore Services
+    flex-shrink:0;
 
-                </a>
+}
 
-            </div>
+.logo img{
 
-            <div class="hero-stats">
+    width:62px;
 
-                <div>
+    height:62px;
 
-                    <h3>100%</h3>
+    object-fit:contain;
 
-                    <p>Custom Built</p>
+}
 
-                </div>
+.logo h2{
 
-                <div>
+    font-size:28px;
 
-                    <h3>Premium</h3>
+    font-weight:700;
 
-                    <p>Components</p>
+    color:var(--dark);
 
-                </div>
+    line-height:1;
 
-                <div>
+}
 
-                    <h3>UK</h3>
+.logo span{
 
-                    <p>Based</p>
+    display:block;
 
-                </div>
+    margin-top:4px;
 
-            </div>
+    font-size:14px;
 
-        </div>
+    color:var(--grey);
 
-        <div class="hero-image">
+    letter-spacing:1px;
 
-            <!-- We'll replace this with a custom render later -->
+}
 
-            <div class="image-placeholder">
+/*=========================
+  NAVIGATION
+=========================*/
 
-                CUSTOM PC RENDER
+nav{
 
-            </div>
+    display:flex;
 
-        </div>
+    align-items:center;
 
-    </div>
+    gap:30px;
 
-</section>
+    margin-left:auto;
 
-<!-- =========================
-     INTRO
-========================= -->
+}
 
-<section id="services">
+nav a{
 
-    <div class="container">
+    text-decoration:none;
 
-        <div class="section-heading">
+    color:var(--dark);
 
-            <h2>
+    font-weight:600;
 
-                Our Services
+    transition:.25s;
 
-            </h2>
+}
 
-            <p>
+nav a:hover{
 
-                From entry-level systems to high-end enthusiast builds,
-                Turner Tech delivers carefully planned computers that are
-                built to perform today and remain upgradeable tomorrow.
+    color:var(--blue);
 
-            </p>
+}
 
-        </div>
+nav a.active{
 
-        <div class="service-grid">
-                      <!-- Gaming PCs -->
+    color:var(--blue);
 
-            <div class="service-card">
+}
 
-                <h3>🎮 Gaming PCs</h3>
+/*=========================
+  BUTTON
+=========================*/
 
-                <p>
+.quote-btn{
 
-                    Designed for players who demand smooth gameplay,
-                    fast loading times and exceptional performance.
+    background:linear-gradient(
+        135deg,
+        var(--blue),
+        var(--blue-dark)
+    );
 
-                </p>
+    color:white;
 
-                <ul>
+    padding:14px 28px;
 
-                    <li>✔ 1080p, 1440p & 4K Gaming</li>
+    border-radius:14px;
 
-                    <li>✔ RGB & Clean Cable Management</li>
+    box-shadow:
+        0 15px 35px rgba(37,99,235,.25);
 
-                    <li>✔ Future Upgrade Friendly</li>
+    transition:.3s;
 
-                    <li>✔ AMD & Intel Options</li>
+}
 
-                </ul>
+.quote-btn:hover{
 
-            </div>
+    transform:translateY(-3px);
 
+}
 
-            <!-- Workstations -->
+/*=========================
+ HERO
+=========================*/
 
-            <div class="service-card">
+.hero{
 
-                <h3>🎬 Creator Workstations</h3>
+    padding:90px 0;
 
-                <p>
+    background:
 
-                    Powerful systems designed for video editing,
-                    3D rendering, streaming and professional workloads.
+    radial-gradient(circle at top right,
+    rgba(37,99,235,.10),
+    transparent 45%),
 
-                </p>
+    radial-gradient(circle at bottom left,
+    rgba(212,175,55,.10),
+    transparent 40%),
 
-                <ul>
+    #f8f9fc;
 
-                    <li>✔ Adobe Creative Cloud</li>
+}
 
-                    <li>✔ Blender & Unreal Engine</li>
+.hero-grid{
 
-                    <li>✔ DaVinci Resolve</li>
+    display:grid;
 
-                    <li>✔ Large Memory Capacity</li>
+    grid-template-columns:1fr 1fr;
 
-                </ul>
+    align-items:center;
 
-            </div>
+    gap:70px;
 
+}
 
-            <!-- Office -->
+.eyebrow{
 
-            <div class="service-card">
+    color:var(--blue);
 
-                <h3>💼 Office PCs</h3>
+    font-weight:700;
 
-                <p>
+    letter-spacing:2px;
 
-                    Reliable and efficient computers built for
-                    businesses, students and everyday productivity.
+    margin-bottom:20px;
 
-                </p>
+    text-transform:uppercase;
 
-                <ul>
+}
 
-                    <li>✔ Microsoft Office</li>
+.hero h1{
 
-                    <li>✔ Fast NVMe SSDs</li>
+    font-size:64px;
 
-                    <li>✔ Quiet Operation</li>
+    line-height:1.1;
 
-                    <li>✔ Excellent Reliability</li>
+    color:var(--dark);
 
-                </ul>
+    margin-bottom:25px;
 
-            </div>
+}
 
+.hero h1 span{
 
-            <!-- Upgrades -->
+    color:var(--blue);
 
-            <div class="service-card">
+}
 
-                <h3>⚡ Hardware Upgrades</h3>
+.hero-text{
 
-                <p>
+    color:var(--grey);
 
-                    Already own a PC?
-                    We can recommend and install upgraded hardware
-                    to improve performance.
+    font-size:18px;
 
-                </p>
+    margin-bottom:35px;
 
-                <ul>
+    max-width:620px;
 
-                    <li>✔ Graphics Cards</li>
+}
 
-                    <li>✔ RAM Upgrades</li>
+.hero-buttons{
 
-                    <li>✔ SSD Installation</li>
+    display:flex;
 
-                    <li>✔ CPU Coolers</li>
+    gap:18px;
 
-                </ul>
+    flex-wrap:wrap;
 
-            </div>
+}
 
+.primary-btn,
+.secondary-btn{
 
-            <!-- Bespoke -->
+    padding:15px 30px;
 
-            <div class="service-card">
+    border-radius:14px;
 
-                <h3>🖥 Bespoke Builds</h3>
+    font-weight:600;
 
-                <p>
+    text-decoration:none;
 
-                    Every Turner Tech computer is built specifically
-                    around your needs and budget.
+    transition:.3s;
 
-                </p>
+}
 
-                <ul>
+.primary-btn{
 
-                    <li>✔ Built To Order</li>
+    background:linear-gradient(
+        135deg,
+        var(--blue),
+        var(--blue-dark)
+    );
 
-                    <li>✔ Premium Components</li>
+    color:white;
 
-                    <li>✔ Stress Tested</li>
+    box-shadow:
+    0 15px 35px rgba(37,99,235,.25);
 
-                    <li>✔ Professionally Assembled</li>
+}
 
-                </ul>
+.primary-btn:hover{
 
-            </div>
+    transform:translateY(-3px);
 
+}
 
-            <!-- Consultation -->
+.secondary-btn{
 
-            <div class="service-card">
+    border:2px solid var(--blue);
 
-                <h3>🤝 PC Consultation</h3>
+    color:var(--blue);
 
-                <p>
+}
 
-                    Not sure what hardware you need?
-                    We'll help you choose the perfect specification.
+.secondary-btn:hover{
 
-                </p>
+    background:var(--blue);
 
-                <ul>
+    color:white;
 
-                    <li>✔ Honest Advice</li>
+}
+/*==================================================
+    TURNER TECH V2
+    PART 2
+    Sections • Cards • Forms • Footer
+==================================================*/
 
-                    <li>✔ Budget Planning</li>
+/*=========================
+  SECTIONS
+=========================*/
 
-                    <li>✔ Future Proofing</li>
+section{
+    padding:90px 0;
+}
 
-                    <li>✔ No Obligation Quotes</li>
+.section-heading{
+    text-align:center;
+    margin-bottom:60px;
+}
 
-                </ul>
+.section-heading h2{
+    font-size:42px;
+    color:var(--dark);
+    margin-bottom:15px;
+}
 
-            </div>
+.section-heading p{
+    max-width:700px;
+    margin:auto;
+    color:var(--grey);
+    font-size:18px;
+}
 
-        </div>
+/*=========================
+  CARD GRIDS
+=========================*/
 
-    </div>
+.card-grid,
+.service-grid,
+.feature-grid{
 
-</section>
+    display:grid;
 
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 
-<!-- ===================================
-     WHY CHOOSE TURNER TECH
-=================================== -->
+    gap:30px;
 
-<section class="why">
+}
 
-    <div class="container">
+/*=========================
+  CARDS
+=========================*/
 
-        <div class="section-heading">
+.card,
+.service-card,
+.feature-card{
 
-            <h2>
+    background:var(--white);
 
-                Why Choose Turner Tech?
+    border-radius:20px;
 
-            </h2>
+    padding:35px;
 
-            <p>
+    box-shadow:var(--shadow);
 
-                Every build receives the same care and attention,
-                whether it's your first gaming PC or a professional workstation.
+    transition:.35s;
 
-            </p>
+    position:relative;
 
-        </div>
+    overflow:hidden;
 
-        <div class="card-grid">
+}
 
-            <div class="card">
+.card::before,
+.service-card::before,
+.feature-card::before{
 
-                <div class="icon">✓</div>
+    content:"";
 
-                <h3>Premium Components</h3>
+    position:absolute;
 
-                <p>
+    top:0;
+    left:0;
 
-                    We only recommend trusted manufacturers
-                    with proven reliability and performance.
+    width:6px;
+    height:100%;
 
-                </p>
+    background:linear-gradient(
+        to bottom,
+        var(--blue),
+        var(--gold)
+    );
 
-            </div>
+}
 
-            <div class="card">
+.card:hover,
+.service-card:hover,
+.feature-card:hover{
 
-                <div class="icon">⚙</div>
+    transform:translateY(-8px);
 
-                <h3>Built To Order</h3>
+    box-shadow:
+        0 22px 50px rgba(0,0,0,.12);
 
-                <p>
+}
 
-                    Every computer is assembled specifically
-                    for each individual customer.
+.card h3,
+.service-card h3,
+.feature-card h3{
 
-                </p>
+    color:var(--dark);
 
-            </div>
+    font-size:30px;
 
-            <div class="card">
+    margin-bottom:18px;
 
-                <div class="icon">🧪</div>
+}
 
-                <h3>Stress Tested</h3>
+.card p,
+.service-card p,
+.feature-card p{
 
-                <p>
+    color:var(--grey);
 
-                    Every system is tested before collection
-                    or delivery.
+    margin-bottom:18px;
 
-                </p>
+}
 
-            </div>
+/*=========================
+  ICONS
+=========================*/
 
-            <div class="card">
+.icon{
 
-                <div class="icon">💬</div>
+    width:70px;
 
-                <h3>Friendly Support</h3>
+    height:70px;
 
-                <p>
+    border-radius:18px;
 
-                    Need advice?
-                    We're always happy to help.
+    display:flex;
 
-                </p>
+    align-items:center;
 
-            </div>
+    justify-content:center;
 
-        </div>
+    background:linear-gradient(
+        135deg,
+        var(--blue),
+        var(--blue-dark)
+    );
 
-    </div>
+    color:white;
 
-</section>
+    font-size:28px;
 
+    margin-bottom:25px;
 
-<!-- ===================================
-     BRANDS
-=================================== -->
+}
 
-<section class="brands">
+/*=========================
+  LISTS
+=========================*/
 
-<div class="container">
+.service-card ul{
 
-<div class="section-heading">
+    list-style:none;
 
-<h2>
+    margin-top:20px;
 
-Brands We Work With
+}
 
-</h2>
+.service-card li{
 
-<p>
+    margin-bottom:12px;
 
-We build using components from some of the
-world's most trusted manufacturers.
+    color:var(--grey);
 
-</p>
+    font-weight:500;
 
-</div>
+}
 
-<div class="brand-grid">
+/*=========================
+  HERO PLACEHOLDER
+=========================*/
 
-<div class="brand-box">AMD</div>
+.image-placeholder{
 
-<div class="brand-box">Intel</div>
+    width:100%;
 
-<div class="brand-box">NVIDIA</div>
+    height:450px;
 
-<div class="brand-box">Corsair</div>
+    border-radius:20px;
 
-<div class="brand-box">ASUS</div>
+    background:
+    linear-gradient(
+        135deg,
+        #f2f5fb,
+        #dfe8ff
+    );
 
-<div class="brand-box">MSI</div>
+    display:flex;
 
-</div>
+    align-items:center;
 
-</div>
+    justify-content:center;
 
-</section>
-<!-- ===================================
-     FAQ
-=================================== -->
+    color:var(--grey);
 
-<section class="process">
+    font-size:28px;
 
-    <div class="container">
+    font-weight:700;
 
-        <div class="section-heading">
+    border:3px dashed #d0d7e8;
 
-            <h2>Frequently Asked Questions</h2>
+}
 
-            <p>
+/*=========================
+  HERO STATS
+=========================*/
 
-                Some of the questions we're asked most often.
+.hero-stats{
 
-            </p>
+    display:flex;
 
-        </div>
+    gap:50px;
 
-        <div class="service-grid">
+    margin-top:45px;
 
-            <div class="service-card">
+}
 
-                <h3>How do I order a custom PC?</h3>
+.hero-stats h3{
 
-                <p>
+    font-size:34px;
 
-                    Simply head to our Contact page and tell us your
-                    budget, what you'll be using the PC for and any
-                    preferences you have. We'll recommend the ideal
-                    specification.
+    color:var(--blue);
 
-                </p>
+}
 
-            </div>
+.hero-stats p{
 
-            <div class="service-card">
+    color:var(--grey);
 
-                <h3>Can I choose every component?</h3>
+}
 
-                <p>
+/*=========================
+  BRANDS
+=========================*/
 
-                    Absolutely. Every build is completely bespoke,
-                    meaning you have complete control over the
-                    specification if you wish.
+.brand-grid{
 
-                </p>
+    display:grid;
 
-            </div>
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
 
-            <div class="service-card">
+    gap:25px;
 
-                <h3>Do you use brand new parts?</h3>
+}
 
-                <p>
+.brand-box{
 
-                    Yes. Unless agreed otherwise, every system is
-                    assembled using brand new genuine components from
-                    trusted manufacturers.
+    background:white;
 
-                </p>
+    border-radius:18px;
 
-            </div>
+    height:110px;
 
-            <div class="service-card">
+    display:flex;
 
-                <h3>Do you offer repairs?</h3>
+    justify-content:center;
 
-                <p>
+    align-items:center;
 
-                    Not at the moment. Our current focus is custom PC
-                    builds and hardware upgrades, although we hope to
-                    introduce repair services in the future.
+    font-size:26px;
 
-                </p>
+    font-weight:700;
 
-            </div>
+    color:var(--dark);
 
-        </div>
+    box-shadow:var(--shadow);
 
-    </div>
+    transition:.3s;
 
-</section>
+}
 
-<!-- ===================================
-     CALL TO ACTION
-=================================== -->
+.brand-box:hover{
 
-<section class="cta">
+    transform:translateY(-5px);
 
-    <div class="container">
+}
 
-        <h2>
+/*=========================
+  TIMELINE
+=========================*/
 
-            Ready To Build Your Dream PC?
+.timeline{
 
-        </h2>
+    display:grid;
 
-        <p>
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
-            Whether you're building your first gaming computer or a
-            professional workstation, Turner Tech is here to help.
+    gap:25px;
 
-            Get in touch today for a free, no-obligation quotation.
+}
 
-        </p>
+.step{
 
-        <a href="contact.html" class="primary-btn">
+    background:white;
 
-            Request Your Free Quote
+    border-radius:20px;
 
-        </a>
+    padding:30px;
 
-    </div>
+    text-align:center;
 
-</section>
+    box-shadow:var(--shadow);
 
-<!-- ===================================
-     FOOTER
-=================================== -->
+}
 
-<footer>
+.step span{
 
-    <div class="container footer-grid">
+    width:60px;
 
-        <div>
+    height:60px;
 
-            <img src="images/logo.png"
-                 class="footer-logo"
-                 alt="Turner Tech Logo">
+    margin:auto;
 
-            <h3>Turner Tech</h3>
+    border-radius:50%;
 
-            <p>
+    display:flex;
 
-                Precision Built.<br>
-                Performance Delivered.
+    justify-content:center;
 
-            </p>
+    align-items:center;
 
-        </div>
+    background:var(--blue);
 
-        <div>
+    color:white;
 
-            <h4>Navigation</h4>
+    font-size:26px;
 
-            <a href="index.html">Home</a>
+    margin-bottom:18px;
 
-            <a href="services.html">Services</a>
+}
 
-            <a href="about.html">About</a>
+/*=========================
+  CONTACT FORM
+=========================*/
 
-            <a href="contact.html">Contact</a>
+.contact-form{
 
-        </div>
+    max-width:760px;
 
-        <div>
+    margin:auto;
 
-            <h4>Contact</h4>
+    display:flex;
 
-            <p>
+    flex-direction:column;
 
-                📧 turnertechuk@gmail.com
+    gap:20px;
 
-            </p>
+}
 
-            <p>
+.contact-form input,
+.contact-form textarea,
+.contact-form select{
 
-                🇬🇧 United Kingdom
+    width:100%;
 
-            </p>
+    padding:18px;
 
-            <p>
+    border-radius:14px;
 
-                Custom PC Builds
+    border:1px solid #d9d9d9;
 
-            </p>
+    font-size:16px;
 
-        </div>
+    font-family:'Poppins',sans-serif;
 
-    </div>
+    transition:.3s;
 
-    <div class="copyright">
+}
 
-        © 2025 Turner Tech. All Rights Reserved.
+.contact-form textarea{
 
-    </div>
+    resize:vertical;
 
-</footer>
+    min-height:180px;
 
-<script src="js/main.js"></script>
+}
 
-</body>
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus{
 
-</html>
+    outline:none;
+
+    border-color:var(--blue);
+
+    box-shadow:
+        0 0 0 4px rgba(37,99,235,.15);
+
+}
+
+/*=========================
+  CTA
+=========================*/
+
+.cta{
+
+    text-align:center;
+
+    color:white;
+
+    background:linear-gradient(
+        135deg,
+        var(--blue),
+        var(--blue-dark)
+    );
+
+}
+
+.cta h2{
+
+    font-size:48px;
+
+    margin-bottom:20px;
+
+}
+
+.cta p{
+
+    max-width:700px;
+
+    margin:auto auto 35px;
+
+    font-size:18px;
+
+    opacity:.95;
+
+}
+
+.cta .primary-btn{
+
+    background:white;
+
+    color:var(--blue);
+
+    box-shadow:none;
+
+}
+
+/*=========================
+  FOOTER
+=========================*/
+
+footer{
+
+    background:#111827;
+
+    color:white;
+
+    padding:80px 0 30px;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr;
+
+    gap:60px;
+
+}
+
+.footer-logo{
+
+    width:80px;
+
+    margin-bottom:20px;
+
+}
+
+footer h3{
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+footer h4{
+
+    margin-bottom:20px;
+
+}
+
+footer p{
+
+    color:#cbd5e1;
+
+    margin-bottom:12px;
+
+}
+
+footer a{
+
+    display:block;
+
+    color:#cbd5e1;
+
+    text-decoration:none;
+
+    margin-bottom:12px;
+
+    transition:.25s;
+
+}
+
+footer a:hover{
+
+    color:white;
+
+}
+
+.copyright{
+
+    margin-top:60px;
+
+    padding-top:25px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    text-align:center;
+
+    color:#94a3b8;
+
+    font-size:15px;
+
+}
+
+/*=========================
+  UTILITIES
+=========================*/
+
+.text-center{
+    text-align:center;
+}
+
+.mt-1{margin-top:20px;}
+.mt-2{margin-top:40px;}
+.mt-3{margin-top:60px;}
+.mt-4{margin-top:80px;}
+
+.mb-1{margin-bottom:20px;}
+.mb-2{margin-bottom:40px;}
+.mb-3{margin-bottom:60px;}
+.mb-4{margin-bottom:80px;}
+/*==================================================
+    TURNER TECH V2
+    PART 3
+    Responsive • Animations • Final Polish
+==================================================*/
+
+/*=========================
+  IMAGE RULES
+=========================*/
+
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+.hero-image img,
+.footer-logo,
+.logo img{
+    object-fit:contain;
+}
+
+/*=========================
+  LINKS & BUTTONS
+=========================*/
+
+a,
+button{
+    transition:all .25s ease;
+}
+
+button{
+    font-family:'Poppins',sans-serif;
+    cursor:pointer;
+    border:none;
+}
+
+/*=========================
+  FOCUS STATES
+=========================*/
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus{
+
+    outline:3px solid rgba(37,99,235,.25);
+    outline-offset:3px;
+
+}
+
+/*=========================
+  SIMPLE FADE ANIMATION
+=========================*/
+
+.card,
+.service-card,
+.feature-card,
+.brand-box,
+.step{
+
+    animation:fadeUp .5s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/*=========================
+  TABLETS
+=========================*/
+
+@media (max-width:1024px){
+
+    .hero-grid{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+
+        text-align:center;
+
+    }
+
+    .hero-text{
+
+        margin-left:auto;
+        margin-right:auto;
+
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+    }
+
+    .hero-stats{
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+    }
+
+    .footer-grid{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+}
+
+/*=========================
+  MOBILE
+=========================*/
+
+@media (max-width:768px){
+
+    header{
+
+        position:relative;
+
+    }
+
+    .navbar{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        padding:20px 0;
+
+        gap:20px;
+
+    }
+
+    nav{
+
+        width:100%;
+
+        display:flex;
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+        gap:16px;
+
+        margin-left:0;
+
+    }
+
+    .logo{
+
+        justify-content:center;
+
+        text-align:center;
+
+    }
+
+    .logo h2{
+
+        font-size:24px;
+
+    }
+
+    .hero{
+
+        padding:70px 0;
+
+    }
+
+    .hero h1{
+
+        font-size:44px;
+
+    }
+
+    .hero-text{
+
+        font-size:16px;
+
+    }
+
+    .section-heading h2{
+
+        font-size:34px;
+
+    }
+
+    .hero-stats{
+
+        gap:25px;
+
+    }
+
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+}
+
+/*=========================
+  SMALL PHONES
+=========================*/
+
+@media (max-width:480px){
+
+    .container{
+
+        width:94%;
+
+    }
+
+    .hero h1{
+
+        font-size:36px;
+
+    }
+
+    .section-heading h2{
+
+        font-size:30px;
+
+    }
+
+    .card,
+    .service-card,
+    .feature-card{
+
+        padding:25px;
+
+    }
+
+    .primary-btn,
+    .secondary-btn,
+    .quote-btn{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+    .hero-stats{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+}
+
+/*=========================
+  DESKTOP IMPROVEMENTS
+=========================*/
+
+@media (min-width:1025px){
+
+    .navbar{
+
+        min-height:90px;
+
+    }
+
+    nav{
+
+        flex-wrap:nowrap;
+
+    }
+
+    .hero{
+
+        min-height:600px;
+
+        display:flex;
+
+        align-items:center;
+
+    }
+
+}
+
+/*=========================
+  SCROLLBAR
+=========================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#eef2f7;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--blue);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--blue-dark);
+
+}
+
+/*=========================
+  SELECTION
+=========================*/
+
+::selection{
+
+    background:var(--blue);
+
+    color:white;
+
+}
+
+/*=========================
+  END
+=========================*/
