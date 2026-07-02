@@ -1356,3 +1356,31 @@ color:white;
 /*==============================
             END
 ==============================*/
+
+
+
+/*==============================
+    Scroll Reveal Animation
+==============================*/
+
+.feature-card,
+.build-card,
+.stat,
+.cta,
+.section-heading{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:all .8s ease;
+
+}
+
+.visible{
+
+    opacity:1 !important;
+
+    transform:translateY(0) !important;
+
+}
