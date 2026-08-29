@@ -1384,3 +1384,28 @@ color:white;
     transform:translateY(0) !important;
 
 }
+
+
+
+/*==============================
+        EMOJI ICON SUPPORT
+==============================*/
+
+.service-icon,
+.contact-icon,
+.about-icon,
+.info-icon{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    font-size:48px;
+
+    line-height:1;
+
+    margin-bottom:22px;
+
+}
