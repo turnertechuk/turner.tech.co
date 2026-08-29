@@ -1418,5 +1418,42 @@ footer hr{
 
 
 /*==============================
+    ABOUT PAGE - NO IMAGE LAYOUT
+==============================*/
+
+/* About hero without image */
+.hero.about-hero .hero-grid,
+.hero-grid.single-column{
+    grid-template-columns:1fr;
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+/* Centre hero buttons */
+.hero-grid.single-column .hero-buttons{
+    justify-content:center;
+}
+
+/* Our story content without workshop image */
+.story-content{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
+
+.story-content h2{
+    margin-bottom:25px;
+    color:var(--dark);
+}
+
+.story-content p{
+    color:var(--grey);
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+
+/*==============================
             END
 ==============================*/
